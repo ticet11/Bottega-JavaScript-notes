@@ -231,3 +231,21 @@ if (age <= 10) {
   console.log("You are old enough to drive");
   console.log("You are old enough to rent a car");
 }
+
+/* JavaScript Switch */
+
+var dataPoint = {};
+
+switch (typeof dataPoint) {
+  case "string":
+    console.log("It's a string");
+    break;
+  case "number":
+    console.log("It's a number");
+    break;
+  case "boolean":
+    console.log("It's a boolean");
+    break;
+  default:
+    console.log('No matches');
+}
