@@ -70,7 +70,7 @@ str.match(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // null
 
 str.replace('fox', 'wolf'); // "The quick brown wolf jumped over the lazy dog"
 
-'555-555-5555 is my phone number'.search(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // 0
+'555-555-5555 is my phone number'.search(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // 0 (index where the search function finds the expression in the string)
 
 'Hi, 555-555-5555 is my phone number'.search(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // 4
 
@@ -82,3 +82,17 @@ var str2 = str.concat('again and again');
 
 str2.indexOf('again'); // 44
 str2.lastIndexOf('again'); // 54
+
+str.slice(4, 10); // "quick "
+
+str.slice(-8); // "lazy dog"
+
+str.slice(10); // "brown fox jumped over the lazy dog"
+
+str.toUpperCase(); // "THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG"
+
+str.toLowerCase(); // "the quick brown fox jumped over the lazy dog"
+
+var messyString = '    Hi there    ';
+
+messyString.trim(); // "Hi there"
