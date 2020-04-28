@@ -195,3 +195,21 @@ if (age >= 25) {
 if (age <= 10) {
   console.log('You can eat from the kid menu');
 }
+
+var age = 30;
+
+if (age <= 10) {
+  console.log('You can eat from the kid menu');
+} else {
+  console.log('Adult menu time for you');
+}
+
+age = 90
+
+if (age >= 25 && age < 80) {
+  console.log('Get in, buddy!')
+} else if (age < 25) {
+  console.log('You are just a baby!')
+} else {
+  console.log('You are an old person!')
+}
