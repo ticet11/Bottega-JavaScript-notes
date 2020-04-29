@@ -371,7 +371,7 @@ function fullName(firstName, lastName, language = "English") {//cleaner and cool
 
 console.log(fullName("Jordan", "Hudgens", "Spanish"));
 
-/* function arguments */
+/* function arguments value vs. reference */
 
 var someUser = {
   name: 'Jordan'
@@ -406,3 +406,25 @@ someUser.name = 'Kristine';
 nameFormatter(someUser.name); // "Oops"
 
 someUser.name; // "Kristine"
+
+/* Closures */
+
+function turtleAverage() {
+  let turtles = 100;
+  let searches = 200;
+  
+  return {
+    getCurrentAverage: function() {
+      return (turtles/searches);
+    },
+    updateTurtlesAndSearches: function(turtle, search) {
+      turtles += turtle;
+      searches += search;
+    }
+  }
+}
+
+const ticet11 = turtleAverage();
+console.log(ticet11.getCurrentAverage());
+ticet11.updateTurtlesAndSearches(5, 15);
+console.log(ticet11.getCurrentAverage());
