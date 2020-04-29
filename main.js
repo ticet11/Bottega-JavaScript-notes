@@ -1,21 +1,19 @@
 /* Variables */
 
-
-var name = 'potate'
+var name = "potate";
 // Can redefine a var variable
-var name = 'junk'
+var name = "junk";
 // Can reassign a var variable
-name = 'wonk'
+name = "wonk";
 
-
-let name = 'potate'
+let name = "potate";
 // Can't redefine a let variable
-let name = 'potate, still'
+let name = "potate, still";
 // Can reassign a let variable
-name = 'wonk'
+name = "wonk";
 
 // Can not reassign or redefine a const variable
-const name = 'potate forever'
+const name = "potate forever";
 
 /* Converting Datatypes */
 
@@ -28,13 +26,13 @@ var ageOne = 12;
 String(ageOne); // '12'
 ageOne.toString(); // '12'
 
-var ageTwo = '33';
+var ageTwo = "33";
 Number(ageTwo); // 33
 parseInt(ageTwo); // 33
 parseFloat(ageTwo); // 33
-+ ageTwo; // 33
-parseInt('5555555555 is my phone number'); // 5555555555
-parseInt('foo 5555555555 is my phone number'); // NaN
++ageTwo; // 33
+parseInt("5555555555 is my phone number"); // 5555555555
+parseInt("foo 5555555555 is my phone number"); // NaN
 Number("100") + 42; // 142
 
 Number(true); // 1
@@ -42,7 +40,7 @@ Number(false); // 0
 
 /* String Functions */
 
-var str = 'The quick brown fox jumped over the lazy dog';
+var str = "The quick brown fox jumped over the lazy dog";
 
 str.length(); // VM2349:1 Uncaught TypeError: str.length is not a function
 
@@ -52,36 +50,40 @@ str.charAt(2); // "e"
 
 str.charAt(200); // ""
 
-str.concat(' again and again'); // "The quick brown fox jumped over the lazy dog again and again"
+str.concat(" again and again"); // "The quick brown fox jumped over the lazy dog again and again"
 
 str; // "The quick brown fox jumped over the lazy dog"
 
-str.includes('quick'); // true
+str.includes("quick"); // true
 
-str.endsWith('dog'); // true
+str.endsWith("dog"); // true
 
-str.startsWith('Foo'); // false
+str.startsWith("Foo"); // false
 
 str.repeat(5); // "The quick brown fox jumped over the lazy dogThe quick brown fox jumped over the lazy dogThe quick brown fox jumped over the lazy dogThe quick brown fox jumped over the lazy dogThe quick brown fox jumped over the lazy dog"
 
-str.match(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // null
+str.match(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/); // null
 
-'555-555-5555'.match(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // (4) ["555-555-5555", "555-", undefined, "555-", index: 0, input: "555-555-5555"]0: "555-555-5555"1: "555-"2: undefined3: "555-"index: 0input: "555-555-5555"length: 4__proto__: Array(0)
+"555-555-5555".match(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/); // (4) ["555-555-5555", "555-", undefined, "555-", index: 0, input: "555-555-5555"]0: "555-555-5555"1: "555-"2: undefined3: "555-"index: 0input: "555-555-5555"length: 4__proto__: Array(0)
 
-str.replace('fox', 'wolf'); // "The quick brown wolf jumped over the lazy dog"
+str.replace("fox", "wolf"); // "The quick brown wolf jumped over the lazy dog"
 
-'555-555-5555 is my phone number'.search(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // 0 (index where the search function finds the expression in the string)
+"555-555-5555 is my phone number".search(
+    /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/
+); // 0 (index where the search function finds the expression in the string)
 
-'Hi, 555-555-5555 is my phone number'.search(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // 4
+"Hi, 555-555-5555 is my phone number".search(
+    /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/
+); // 4
 
-str.indexOf('jumped'); // 20
+str.indexOf("jumped"); // 20
 
-str.lastIndexOf('jumped'); // 20
+str.lastIndexOf("jumped"); // 20
 
-var str2 = str.concat('again and again');
+var str2 = str.concat("again and again");
 
-str2.indexOf('again'); // 44
-str2.lastIndexOf('again'); // 54
+str2.indexOf("again"); // 44
+str2.lastIndexOf("again"); // 54
 
 str.slice(4, 10); // "quick "
 
@@ -93,7 +95,7 @@ str.toUpperCase(); // "THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG"
 
 str.toLowerCase(); // "the quick brown fox jumped over the lazy dog"
 
-var messyString = '    Hi there    ';
+var messyString = "    Hi there    ";
 
 messyString.trim(); // "Hi there"
 
@@ -139,13 +141,13 @@ var someOtherNum = -someNum;
 
 someOtherNum; // -10
 
-var strNum = '100';
+var strNum = "100";
 
-var convertedNum = + strNum;
+var convertedNum = +strNum;
 
 convertedNum; // 100
 
-var name = 'Tiffany';
+var name = "Tiffany";
 
 var sum = 0;
 
@@ -172,46 +174,46 @@ sum *= gradeTwo; // 14400
    Subtraction
 */
 
-var num = 5 + (5 * 10) / 6**2 - 1;
-var num = 5 / 5 * 4;
+var num = 5 + (5 * 10) / 6 ** 2 - 1;
+var num = (5 / 5) * 4;
 
 /* Conditionals */
 
 var age = 10;
-var ageTwo = '12';
+var ageTwo = "12";
 
 if (age === ageTwo) {
-  console.log('They are equal');
+    console.log("They are equal");
 }
 
 if (age !== ageTwo) {
-  console.log('Not equal');
+    console.log("Not equal");
 }
 
 if (age >= 25) {
-  console.log('Old enough to rent a car');
+    console.log("Old enough to rent a car");
 }
 
 if (age <= 10) {
-  console.log('You can eat from the kid menu');
+    console.log("You can eat from the kid menu");
 }
 
 var age = 30;
 
 if (age <= 10) {
-  console.log('You can eat from the kid menu');
+    console.log("You can eat from the kid menu");
 } else {
-  console.log('Adult menu time for you');
+    console.log("Adult menu time for you");
 }
 
-age = 90
+age = 90;
 
 if (age >= 25 && age < 80) {
-  console.log('Get in, buddy!')
+    console.log("Get in, buddy!");
 } else if (age < 25) {
-  console.log('You are just a baby!')
+    console.log("You are just a baby!");
 } else {
-  console.log('You are an old person!')
+    console.log("You are an old person!");
 }
 
 // We recognize that there is a hole is this code logic covering ages 11 -15. As was discussed in the lesson this does happen.
@@ -219,17 +221,17 @@ if (age >= 25 && age < 80) {
 var age = 30;
 
 if (age <= 10) {
-  console.log("You can eat from the kid's menu");
-  console.log("You are not old enough to drive");
-  console.log("You are not old enough to rent a car");
+    console.log("You can eat from the kid's menu");
+    console.log("You are not old enough to drive");
+    console.log("You are not old enough to rent a car");
 } else if (age >= 16 && age < 25) {
-  console.log("You can not eat from the kid's menu");
-  console.log("You are old enough to drive");
-  console.log("You are not old enough to rent a car");
+    console.log("You can not eat from the kid's menu");
+    console.log("You are old enough to drive");
+    console.log("You are not old enough to rent a car");
 } else if (age >= 25) {
-  console.log("You can not eat from the kid's menu");
-  console.log("You are old enough to drive");
-  console.log("You are old enough to rent a car");
+    console.log("You can not eat from the kid's menu");
+    console.log("You are old enough to drive");
+    console.log("You are old enough to rent a car");
 }
 
 /* JavaScript Switch */
@@ -237,17 +239,17 @@ if (age <= 10) {
 var dataPoint = {};
 
 switch (typeof dataPoint) {
-  case "string":
-    console.log("It's a string");
-    break;
-  case "number":
-    console.log("It's a number");
-    break;
-  case "boolean":
-    console.log("It's a boolean");
-    break;
-  default:
-    console.log('No matches');
+    case "string":
+        console.log("It's a string");
+        break;
+    case "number":
+        console.log("It's a number");
+        break;
+    case "boolean":
+        console.log("It's a boolean");
+        break;
+    default:
+        console.log("No matches");
 }
 
 /* Ternary Operator */
@@ -258,14 +260,14 @@ function ageVerification(age) {
     // } else {
     //   console.log("can't rent a car");
     // }
-  
+
     return age > 25 ? "can rent a car" : "can't rent a car";
-  }
-  
-  ageVerification(30); //?
-  ageVerification(10); //?
-  
-  function adminControls(user) {
+}
+
+ageVerification(30); //?
+ageVerification(10); //?
+
+function adminControls(user) {
     // if (user) {
     //   if (user.admin) {
     //     return 'showing admin controls...';
@@ -275,66 +277,96 @@ function ageVerification(age) {
     // } else {
     //   return 'You need to be logged in';
     // }
-  
+
     return user
-      ? user.admin ? "showing admin controls" : "You need to be an admin"
-      : "you need to be logged in";
-  }
-  
-  const userOne = {
+        ? user.admin
+            ? "showing admin controls"
+            : "You need to be an admin"
+        : "you need to be logged in";
+}
+
+const userOne = {
     name: "Kristine",
-    admin: true
-  };
-  
-  adminControls(userOne); //?
-  
-  const userTwo = null;
-  
-  adminControls(userTwo); //?
-  
-  const userThree = {
+    admin: true,
+};
+
+adminControls(userOne); //?
+
+const userTwo = null;
+
+adminControls(userTwo); //?
+
+const userThree = {
     name: "Tiffany",
-    admin: false
-  };
-  
-  adminControls(userThree); //?
+    admin: false,
+};
 
-  /* Variable Scope */
+adminControls(userThree); //?
 
-  var userObj = {
-    email: 'sample@example.com',
-    fullName: 'Kristine Hudgens'
-  }
+/* Variable Scope */
 
-  // Better practice if this function is the only place it needs to be used.
-  function dashboardGreeting() {
+var userObj = {
+    email: "sample@example.com",
+    fullName: "Kristine Hudgens",
+};
+
+// Better practice if this function is the only place it needs to be used.
+function dashboardGreeting() {
     var userObj = {
-      email: 'sample2@example.com',
-      fullName: 'Jordan Hudgens'
-    }
+        email: "sample2@example.com",
+        fullName: "Jordan Hudgens",
+    };
     console.log("Hi there, ".concat(userObj.fullName));
-  }
-  
-  dashboardGreeting();
-  console.log(userObj.fullName);
+}
 
-  /* function declarations vs function expressions */
+dashboardGreeting();
+console.log(userObj.fullName);
 
-  var greeting = function () {
+/* function declarations vs function expressions */
+
+var greeting = function () {
     return "Hi there!";
-   };
-   
-   var age = 4;
-   
-   if (age <= 10) {
-     var buildMenu = function () {
-       return "Kids' Menu";
-     };
-   
-     function wrongMenuBuilder () {
-       return "Wrong Kids' Menu";
-     }
-   
-     console.log(buildMenu());
-     console.log(wrongMenuBuilder());
-   }
+};
+
+var age = 4;
+
+if (age <= 10) {
+    var buildMenu = function () {
+        return "Kids' Menu";
+    };
+
+    function wrongMenuBuilder() {
+        return "Wrong Kids' Menu";
+    }
+
+    console.log(buildMenu());
+    console.log(wrongMenuBuilder());
+}
+
+/* function arguments */
+
+function fullName(firstName, lastName, language) {
+    var language = language || "English"; //ugly
+    return (
+        lastName.toUpperCase() +
+        ", " +
+        firstName.toUpperCase() +
+        " - " +
+        language
+    );
+}
+
+console.log(fullName("Jordan", "Hudgens", "Spanish"));
+
+function fullName(firstName, lastName, language = "English") {//cleaner and cooler
+    
+    return (
+        lastName.toUpperCase() +
+        ", " +
+        firstName.toUpperCase() +
+        " - " +
+        language
+    );
+}
+
+console.log(fullName("Jordan", "Hudgens", "Spanish"));
