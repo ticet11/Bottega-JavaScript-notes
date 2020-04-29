@@ -305,7 +305,8 @@ function ageVerification(age) {
     email: 'sample@example.com',
     fullName: 'Kristine Hudgens'
   }
-  
+
+  // Better practice if this function is the only place it needs to be used.
   function dashboardGreeting() {
     var userObj = {
       email: 'sample2@example.com',
@@ -316,3 +317,24 @@ function ageVerification(age) {
   
   dashboardGreeting();
   console.log(userObj.fullName);
+
+  /* function declarations vs function expressions */
+
+  var greeting = function () {
+    return "Hi there!";
+   };
+   
+   var age = 4;
+   
+   if (age <= 10) {
+     var buildMenu = function () {
+       return "Kids' Menu";
+     };
+   
+     function wrongMenuBuilder () {
+       return "Wrong Kids' Menu";
+     }
+   
+     console.log(buildMenu());
+     console.log(wrongMenuBuilder());
+   }
