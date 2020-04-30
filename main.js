@@ -537,3 +537,8 @@ var players = [
     console.log(players[i]);
     i++;
   } while (i < players.length)
+
+/* Integrating Conditionals into Strings with Ternary Operators */
+
+const page = 'about';
+console.log(`class=${ page === 'Home' ? 'master-layout' : 'secondary-layout' }`);
