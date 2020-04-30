@@ -615,3 +615,16 @@ const [posts, repos, profile] = apiList;
 console.log(posts);
 console.log(repos);
 console.log(profile);
+
+/* Pass objects as function arguments */
+
+const user = {
+  name: 'Kristine',
+  email: 'kristine@devcamp.com'
+}
+
+const renderUser = ({ name, email }) => {
+  console.log(`${name}: ${email}`);
+}
+
+renderUser(user);
