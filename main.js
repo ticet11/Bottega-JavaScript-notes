@@ -757,3 +757,21 @@ class DungeonMaster {
 
 const brian = new DungeonMaster({ name: 'Brian Kozub' });
 console.log(brian.name);
+
+/* OOP Instance Methods */
+
+class Instructor {
+  constructor({ name, cohort = "April 6" }) {
+    this.name = name;
+    this.cohort = cohort;
+  }
+  renderDetails() {
+    console.log(`${this.name}: ${this.cohort}`);
+  }
+}
+
+const brian = new Instructor({ name: 'Brian Kozub' });
+const benny = new Instructor({ name: 'Benny Kozub', cohort: 'April 7' });
+
+brian.renderDetails();
+benny.renderDetails();
