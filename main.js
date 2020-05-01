@@ -746,3 +746,14 @@ const obj2 = {
 
 obj1 == obj2;
 isEqual(obj1, obj2);
+
+/* Classes */
+
+class DungeonMaster {
+  constructor({ name }) {
+    this.name = name;
+  }
+}
+
+const brian = new DungeonMaster({ name: 'Brian Kozub' });
+console.log(brian.name);
