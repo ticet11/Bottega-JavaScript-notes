@@ -73,14 +73,14 @@
 
 // console.log(totalHomeruns);
 
-// const links = [
-//     "https://google.com",
-//     "https://devcamp.com",
-//     "https://airbnb.com"
-//   ];
+const links = [
+    "https://google.com",
+    "https://devcamp.com",
+    "https://airbnb.com"
+  ];
 
-// const webLinks = _.reduce(links, (content, link) => {
-//     return `<a href="${link}">${link}</a>\n`.concat(content);
-// }, '');
+const webLinks = _.reduce(links, (content, link) => {
+    return `<a href="${link}">${link}</a>\n`.concat(content);
+}, '');
 
-// console.log(webLinks);
+console.log(webLinks);

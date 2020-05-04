@@ -838,49 +838,49 @@ sleepyGreeting
     console.error(err);
   });
 
-  /* Group promises together */
+/* Group promises together */
 
-  const greeting = new Promise((resolve, reject) => {
-    resolve('Hi, there.');
-    reject('Oops, bad greeting.');
-  });
-  
-  const updateAccount = new Promise((resolve, reject) => {
-    resolve('Updating login...');
-    reject('Error updating account with login.');
-  });
-  
-  const loginActivities = Promise.all([greeting, updateAccount]);
-  loginActivities.then(res => {
-    res.forEach(activity => {
-      console.log(activity);
-    })
+const greeting = new Promise((resolve, reject) => {
+  resolve('Hi, there.');
+  reject('Oops, bad greeting.');
+});
+
+const updateAccount = new Promise((resolve, reject) => {
+  resolve('Updating login...');
+  reject('Error updating account with login.');
+});
+
+const loginActivities = Promise.all([greeting, updateAccount]);
+loginActivities.then(res => {
+  res.forEach(activity => {
+    console.log(activity);
   })
+})
 
-  /* Promises and closures */
+/* Promises and closures */
 
-  const login = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve('User logged in...');
-      }, 4000);
-    });
-  }
-  
-  const updateAccount = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve('Updating last login...');
-      }, 2000);
-    });
-  }
-  
-  async function loginActivities(login, updateAccount) {
-    const returnedLogin = await login;
-    console.log(returnedLogin);
-  
-    const returnedUpdateAccount = await updateAccount;
-    console.log(returnedUpdateAccount);
-  }
-  
-  loginActivities(login(), updateAccount());
+const login = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('User logged in...');
+    }, 4000);
+  });
+}
+
+const updateAccount = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Updating last login...');
+    }, 2000);
+  });
+}
+
+async function loginActivities(login, updateAccount) {
+  const returnedLogin = await login;
+  console.log(returnedLogin);
+
+  const returnedUpdateAccount = await updateAccount;
+  console.log(returnedUpdateAccount);
+}
+
+loginActivities(login(), updateAccount());
