@@ -1,3 +1,4 @@
-import { multiply } from './helper';
+// import { multiply, greeting } from './helper';
+import * as helper from './helper';
 
-console.log(multiply(2, 5));
+console.log(helper.greeting);
