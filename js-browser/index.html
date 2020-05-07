@@ -3,13 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .active-heading {
+                color: firebrick;
+                font-size: 2em;
+                cursor: pointer;
+            }
+
+            .non-active-heading {
+                color: cornflowerblue;
+                font-size: 4em;
+                cursor: pointer;
+            }
+        </style>
         <title>Document</title>
     </head>
     <body>
-        <h1>Howdy</h1>
+        <h1 id="main-heading" class="active-heading">Howdy</h1>
         <ul class='unordered-list'>
           <li>good boy</li>
         <ul>
+        <script src="main.js"></script>
     </body>
-    <script src="main.js"></script>
 </html>
