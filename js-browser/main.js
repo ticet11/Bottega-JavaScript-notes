@@ -1,3 +1,12 @@
-const fullName = (first, last) => `${first} ${last}`;
+// DOM -> Document Object Model
 
-alert(fullName('Brian', 'Kozub'));
+const user = {
+    name: 'Brian',
+    email: 'brian@briankozub.com',
+    favorites: [
+        'MacDonald',
+        "Cubby's"
+    ]
+}
+
+user.favorites[1];
