@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="widget">
+            <input type="text" id="chat-input">
+            <button onclick="sendMessage()" id="messageButton">
+                Submit
+            </button>
+
+            <div class="chat-wrapper"></div>
+        </div>
+    </body>
+    <script>
+        function sendMessage () {
+            const newDiv = document.createElement('div');
+            newDiv.classList.add('chatMessage');
+            let chatInput = document.querySelector('#chat-input').value;
+            const newContent = document.createTextNode(chatInput);
+            newDiv.appendChild(newContent);
+            
+            const widget = document.querySelector('.widget');
+            let chatWrapper = document.querySelector('chat-wrapper');
+            document.querySelector('#chat-input').value = '';
+            
+            // Causes each new element to go above the previous.
+            if (document.querySelectorAll('.chatMessage').length > 0) {
+                chatWrapper = document.querySelectorAll('.chatMessage')[0];
+            }
+
+            widget.insertBefore(newDiv, chatWrapper);
+        }
+    </script>
+</html>
