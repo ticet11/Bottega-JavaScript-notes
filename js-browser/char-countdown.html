@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" class="msgInput" />
+        <div>Characters left <span class="msgCounter">144</span></div>
+    </body>
+    <script>
+        const msgInput = document.querySelector(".msgInput");
+        const msgCounter = document.querySelector(".msgCounter");
+        const max = 144;
+
+        // ensure character count
+        const contentLength = (content, max) =>
+            content.length > max ? false : true;
+
+        // event listener watch for keyup
+        msgInput.onkeyup = function () {
+            msgCounter.innerHTML = max - this.value.length;
+        };
+    </script>
+</html>
