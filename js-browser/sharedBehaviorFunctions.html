@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" class="msgInput" />
+        <div>Characters left <span class="msgCounter">144</span></div>
+        <hr>
+        <input type="text" class="tagInput" />
+        <div>Characters left <span class="tagCounter">20</span></div>
+    </body>
+    <script>
+        const msgInput = document.querySelector(".msgInput");
+        const msgCounter = document.querySelector(".msgCounter");
+        const tagInput = document.querySelector(".tagInput");
+        const tagCounter = document.querySelector(".tagCounter");
+
+        // ensure character count
+        const contentLength = (content, max) =>
+            content.length > max ? false : true;
+
+        // event listener watch for keyup
+       const textFieldLengthValidator = (textField, counter, maxCount) => {
+        textField.onkeyup = function () {
+            counter.innerHTML = maxCount - this.value.length;
+
+            if (!ensureContentLength(this.value, (maxCount - 1))) {
+                textField.disabled = true;
+            }
+        };
+       }
+
+       textFieldLengthValidator(msgInput, msgCounter, 144);
+       textFieldLengthValidator(tagInput, tagCounter, 20)
+    </script>
+</html>
