@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnClick</title>
+</head>
+<body>
+    <div id="dateComponent">
+
+    </div>
+    <!-- <button onclick='renderDate()'>Click for Date!</button> -->
+    <button id="dateButton">Click for Date!</button>
+</body>
+<script>
+    const dateElement = document.getElementById('dateComponent');
+    const dateButton = document.getElementById('dateButton')
+
+    // renderDate = () => {
+    //     dateElement.innerHTML = Date();
+    // }
+
+        dateButton.addEventListener('click', (event) => {
+            dateElement.innerHTML = Date();
+        })
+</script>
+</html>
